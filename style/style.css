@@ -232,7 +232,7 @@ transition: all 5s cubic-bezier(0.165, 0.84, 0.44, 1);
 /* banner styling start */
 
 .banner {
-    background-image: url(/blogr/images/bg-pattern-intro-desktop.svg), linear-gradient(to right, var(--clr-very-light-red), var(--clr-light-red));
+    background-image: url(/images/bg-pattern-intro-desktop.svg), linear-gradient(to right, var(--clr-very-light-red), var(--clr-light-red));
     background-position: center;
     background-repeat: no-repeat;
     background-size: 218% auto;
