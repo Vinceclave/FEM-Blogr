@@ -129,7 +129,7 @@
 
     
     .banner {
-        background-image: url(/blogr/images/bg-pattern-intro-mobile.svg), 
+        background-image: url(/images/bg-pattern-intro-mobile.svg), 
         linear-gradient(to right, var(--clr-very-light-red), var(--clr-light-red));
         background-position: center;
         background-size: auto;
