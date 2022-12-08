@@ -1,0 +1,397 @@
+
+
+/* header styling start
+.header {
+    position: absolute;
+    width: 100%;
+    padding: var(--space-l) 0 0 0 ;
+}
+
+.navbar {
+    padding: 0 2em;
+    display: flex;
+    gap: 4em;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.logo-img img {
+    width: 100% ;
+}
+
+.nav_toggle {
+    display: none;
+    width: 100px;
+    height: 100px;
+}
+
+.main_nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -0.2em;
+}
+
+.menu .menu-list a,
+.account a{
+    font-family: var(--font-overpass);
+    font-weight: var(--fw-600);
+    color: var(--clr-txt)
+}
+
+.menu .menu-list a:hover, 
+.account a:hover {
+    color: var(--clr-txt);
+    text-decoration: underline;
+}
+
+.menu-title {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.arrow {
+    width: 0.7em;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+ .arrow-open {
+    transform: rotate(-180deg);
+}
+.account .clr-button:hover{
+    color: var(--clr-txt);
+    background-color: var(--clr-txt);
+    opacity: 0.3;
+    text-decoration: none;
+} 
+.sub-menu .sub-menu-list a {
+    font-weight: var(--fw-300);
+    color: var(--body-copy);
+}
+
+.sub-menu .sub-menu-list a:hover {
+    color: var(--body-copy);
+    font-weight: var(--fw-600);
+    text-decoration: none;
+}
+
+.account .clr-button {
+    font-size: 1rem;
+    padding:0.7em 2.5em;
+    border-radius: 2.5em;
+    background-color: var(--clr-txt);
+    color: var(--clr-cta-text);
+}
+
+.main_nav .menu {
+    display: flex;
+    gap: 4.5em;
+    align-items: center;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.account {
+    display: flex;
+    gap: 3em;
+    align-items: center;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.sub-menu {
+    display: none;
+    
+}
+
+.submenu-hidden {
+     background-color: var(--clr-txt);
+    color: var(--body-copy);
+    position: absolute;
+    top: 110px;
+    padding: 2em 3em 2em 1.5em;
+    border-radius: 0.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    box-shadow: 0px 10px 67px -20px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 10px 67px -20px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 10px 67px -20px rgba(0,0,0,0.75);
+transition: all 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+   
+}
+/* banner styling start */
+
+/* .banner {
+    background-image: url(/images/bg-pattern-intro-desktop.svg), linear-gradient(to right, var(--clr-very-light-red), var(--clr-light-red));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 218% auto;
+    background-position-x: 25%;
+    background-position-y: 52%;
+    width: 100%;
+    height: 550px;
+    border-bottom-left-radius: 3.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-content h1 {
+    margin-top: 1em;
+    font-size: clamp(2.1rem, calc(1.6rem + 3.3vw), 4.9rem);
+    font-family: var(--font-overpass);
+    font-weight: var(--fw-600);
+    color: var(--clr-txt);
+    line-height: 1.5em
+}
+
+.banner-content p {
+    font-family: var(--font-overpass);
+    color: var(--clr-txt);
+    margin-bottom: 2.5em;
+}
+
+.cta_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.cta_buttons .clr-wht {
+    background-color: var(--clr-txt);
+    color: var(--clr-cta-text);
+    font-family: var(--font-ubunto);
+    font-weight: var(--fw-500);
+    padding: 0.9em 1em;
+    border-radius: 30px;
+}
+
+/* .cta_buttons .clr-wht:hover {
+    
+/* } */
+
+/* .cta_buttons .clr-rd {
+    border: 1px solid var(--clr-txt);
+    color: var(--clr-txt);
+    font-family: var(--font-ubunto);
+    font-weight: var(--fw-500);
+    padding: 0.9em 1.6em;
+    border-radius: 30px;
+}
+
+.cta_buttons .clr-rd:hover {
+    background-color: var(--clr-txt);
+    color: var(--clr-cta-text);
+
+}
+
+/* main styling start */
+
+/* main top */
+.main_top {
+    overflow: hidden;
+    width: 100%;
+    padding: 10em 0 10em 2em;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.top-section-content h2 {
+    position: absolute;
+    top: 135px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--font-overpass);
+    font-size: 2rem;
+}
+.main_top_content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.main_top_content .content-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.main_top_content .content-left .content-top h3,
+.main_top_content .content-left .content-bottom h3{
+     font-family: var(--font-overpass);
+     font-size: 1.6rem;
+     font-weight: var(--fw-600);
+     color: var(--heading-clr);
+     line-height: 3em;   
+}
+
+
+.main_top_content .content-left .content-top p,
+.main_top_content .content-left .content-bottom p   {
+    max-width: 31em;
+    font-family: var(--font-overpass);
+    color: var(--body-copy);
+    line-height: 1.7em;
+}
+.main_top_content .content-right {
+    width: 50%;
+}
+
+.main_top .content-right img {
+    width: 120%;
+    margin-left: 50px;
+}
+
+/* main middle styling */
+.main_middle {
+    position: relative;
+
+    background-color: var(--clr-gray-blue);
+    border-bottom-left-radius: 5em ;
+    border-top-right-radius: 5em ;
+}
+
+.middle-section-content {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+    gap: 2em;
+}
+
+.middle-section-content .middle-content-left img {
+    width: auto;
+    margin-top: 3em;
+    margin-left: -3em;
+}
+
+.middle-content-right {
+    width: 40%;
+}
+.middle-content-right h2 {
+    font-family: var(--font-overpass);
+    font-size: 2rem;
+    line-height: 1em;
+    color: var(--clr-txt);
+    margin-bottom: 1em;
+}
+
+.middle-content-right p {
+    font-family: var(--font-overpass);
+    color: var(--clr-txt);
+    line-height: 2em;
+    max-width: 500px;
+}
+
+/* main bottom styling start */
+
+
+.main_bottom{
+    overflow: hidden;
+    width: 100%;
+    padding: 10em 2em 10em 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-section-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+
+}
+
+.bottom-section-content .content-left {
+    width: 50%;
+}
+
+.bottom-section-content .content-left img {
+    width: 120%;
+    margin-left: -50px;
+}
+
+.bottom-section-content .content-right {
+    width: 40%;
+}
+
+.bottom-section-content .content-right  .content-top h3,
+.bottom-section-content .content-right  .content-bottom h3{
+     font-family: var(--font-overpass);
+     font-size: 1.6rem;
+     font-weight: var(--fw-600);
+     color: var(--heading-clr);
+     line-height: 3em;   
+}
+
+
+.bottom-section-content .content-right  .content-top p,
+.bottom-section-content .content-right  .content-bottom p   {
+    max-width: 31em;
+    font-family: var(--font-overpass);
+    color: var(--body-copy);
+    line-height: 1.7em;
+}  */
+
+/* footer styling start */
+/* 
+.footer {
+    background-color: var(--footer-bg);
+    width: 100%;
+    border-top-right-radius: 5em ;
+    padding: 5em 2em;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 11em;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 13em
+}
+
+.footer-menu-list {
+    font-family: var(--font-ubunto);
+    font-weight: var(--fw-4);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.footer-menu-list a {
+    color: var(--clr-txt);
+}
+
+.footer-sub-menu .footer-sub-menu-list {
+    display: block;
+    padding: 0.5em 0;
+}
+.footer-sub-menu-list a {
+    color: var(--clr-footer-txt);
+}
+.footer-sub-menu-list:hover {
+    text-decoration: underline;
+} */

@@ -1,0 +1,518 @@
+/* Importing font through google font */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    /* Primary style color root */
+    --clr-cta-text: hsl(356, 100%, 66%);
+    --clr-cta-hover-bg: hsl(355, 100%, 74%);
+    --heading-clr: hsl(208, 49%, 24%);
+   /* transparency */
+      --transparent: hsl(356, 100%, 74%);
+    /* neutral style color root */
+    --clr-txt: hsl(0, 0%, 100%);
+    --clr-footer-txt: hsl(240, 22%, 87%);
+    --body-copy: hsl(207, 13%, 34%);
+    --footer-bg: hsl(240, 10%, 16%);
+
+    /* Gradient stlye color root */
+        /* Intro/CTA mobile nav */
+        --clr-very-light-red: hsl(13, 100%, 72%);
+        --clr-light-red: hsl(353, 100%, 62%);
+        
+        /* background gradient body */
+        --clr-gray-blue: hsl(237, 17%, 21%);
+        --clr-dark-desaturated-blue: hsl(237, 23%, 32%);
+    /* font family */
+    --font-overpass: "Overpass",sans-serif;
+    --font-ubunto: "Ubuntu",sans-serif;
+         /* font-weight*/
+        --fw-300: 300;
+        --fw-400: 400;
+        --fw-500: 500;
+        --fw-600: 600;
+        --fw-700: 700; 
+/* typography */
+--step-0: clamp(1.00rem, calc(0.96rem + 0.19vw), 1.13rem);
+--step-1: clamp(1.20rem, calc(1.14rem + 0.31vw), 1.41rem);
+--step-2: clamp(1.44rem, calc(1.35rem + 0.47vw), 1.76rem);
+--step-3: clamp(1.73rem, calc(1.59rem + 0.70vw), 2.20rem);
+--step-4: clamp(2.07rem, calc(1.87rem + 1.00vw), 2.75rem);
+--step-5: clamp(2.49rem, calc(2.21rem + 1.40vw), 3.43rem);
+--step-6: clamp(2.99rem, calc(2.60rem + 1.93vw), 4.29rem);
+--step-7: clamp(3.58rem, calc(3.06rem + 2.64vw), 5.36rem);
+--step-8: clamp(4.30rem, calc(3.59rem + 3.56vw), 6.71rem);
+ /* spaces margin*/
+         --space-3xs: clamp(0.25rem, calc(0.23rem + 0.09vw), 0.31rem);
+  --space-2xs: clamp(0.50rem, calc(0.48rem + 0.09vw), 0.56rem);
+  --space-xs: clamp(0.75rem, calc(0.71rem + 0.19vw), 0.88rem);
+  --space-s: clamp(1.00rem, calc(0.96rem + 0.19vw), 1.13rem);
+  --space-m: clamp(1.50rem, calc(1.44rem + 0.28vw), 1.69rem);
+  --space-l: clamp(2.00rem, calc(1.93rem + 0.37vw), 2.25rem);
+  --space-xl: clamp(3.00rem, calc(2.89rem + 0.56vw), 3.38rem);
+  --space-2xl: clamp(4.00rem, calc(3.85rem + 0.74vw), 4.50rem);
+  --space-3xl: clamp(6.00rem, calc(5.78rem + 1.11vw), 6.75rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.25rem, calc(0.16rem + 0.46vw), 0.56rem);
+  --space-2xs-xs: clamp(0.50rem, calc(0.39rem + 0.56vw), 0.88rem);
+  --space-xs-s: clamp(0.75rem, calc(0.64rem + 0.56vw), 1.13rem);
+  --space-s-m: clamp(1.00rem, calc(0.80rem + 1.02vw), 1.69rem);
+  --space-m-l: clamp(1.50rem, calc(1.28rem + 1.11vw), 2.25rem);
+  --space-l-xl: clamp(2.00rem, calc(1.59rem + 2.04vw), 3.38rem);
+  --space-xl-2xl: clamp(3.00rem, calc(2.56rem + 2.22vw), 4.50rem);
+  --space-2xl-3xl: clamp(4.00rem, calc(3.19rem + 4.07vw), 6.75rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1.00rem, calc(0.63rem + 1.85vw), 2.25rem);
+}
+
+/* Clear all */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: auto;
+    background-color: var(--clr-txt);
+    font-size: 16px;
+}
+
+.body-hidden {
+    overflow: hidden;
+}
+
+ul, a {
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    color: var(--body-copy);
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* header styling start */
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 2.5em 0 0;
+}
+
+.navbar {
+    padding: 0 2em;
+    display: flex;
+    gap: 4em;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-close,
+.nav-open {
+    display: none;
+}
+
+
+.logo-img img {
+    width: 100% ;
+}
+
+
+.main_nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -0.2em;
+}
+
+.menu .menu-list a,
+.account a{
+    font-family: var(--font-overpass);
+    font-weight: var(--fw-600);
+    color: var(--clr-txt)
+}
+
+.menu .menu-list a:hover, 
+.account a:hover {
+    color: var(--clr-txt);
+    text-decoration: underline;
+}
+
+.menu-title {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.arrow {
+    width: 0.7em;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.arrow-open {
+    transform: rotate(-180deg);
+}
+.account .clr-button:hover,
+.cta_buttons .clr-wht:hover{
+    color: var(--clr-txt);
+    background-color: var(--transparent);
+    text-decoration: none;
+}
+
+.sub-menu .sub-menu-list a {
+    font-weight: var(--fw-300);
+    color: var(--body-copy);
+}
+
+.sub-menu .sub-menu-list a:hover {
+    color: var(--body-copy);
+    font-weight: var(--fw-600);
+    text-decoration: none;
+}
+
+.account .clr-button {
+    font-size: 1rem;
+    padding:0.7em 2.5em;
+    border-radius: 2.5em;
+    background-color: var(--clr-txt);
+    color: var(--clr-cta-text);
+}
+
+.main_nav .menu {
+    display: flex;
+    gap: 4.5em;
+    align-items: center;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+.account {
+    display: flex;
+    gap: 3em;
+    align-items: center;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.sub-menu {
+    display: none;
+    
+}
+.sub-menu .active{
+  display: block;
+}
+
+.submenu-hidden {
+     background-color: var(--clr-txt);
+    color: var(--body-copy);
+    position: absolute;
+    top: 110px;
+    padding: 1em 3em 2em 1.5em;
+    border-radius: 0.4em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    box-shadow: 0px 10px 67px -20px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 10px 67px -20px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 10px 67px -20px rgba(0,0,0,0.75);
+transition: all 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+   
+}
+/* banner styling start */
+
+.banner {
+    background-image: url(/blogr/images/bg-pattern-intro-desktop.svg), linear-gradient(to right, var(--clr-very-light-red), var(--clr-light-red));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 218% auto;
+    background-position-x: 25%;
+    background-position-y: 52%;
+    width: 100%;
+    height: 550px;
+    border-bottom-left-radius: 3.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);;
+}
+
+.banner-content h1 {
+    margin: 1em 0.2em 0.5em;
+    font-size: var(--step-6);
+    font-family: var(--font-overpass);
+    font-weight: var(--fw-600);
+    color: var(--clr-txt);
+    line-height: 1.2;
+}
+
+.banner-content p {
+    font-size: var(--step-0);
+    font-family: var(--font-overpass);
+    color: var(--clr-txt);
+    margin: 0 0.4em 2.5em;
+}
+
+.cta_buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.cta_buttons .clr-wht {
+    background-color: var(--clr-txt);
+    color: var(--clr-cta-text);
+    font-family: var(--font-ubunto);
+    font-weight: var(--fw-500);
+    padding: var(--space-xs-s) var(--space-xs-s);
+    border-radius: 30px;
+}
+
+/* .cta_buttons .clr-wht:hover {
+    
+} */
+
+.cta_buttons .clr-rd {
+    border: 1px solid var(--clr-txt);
+    color: var(--clr-txt);
+    font-family: var(--font-ubunto);
+    font-weight: var(--fw-500);
+    padding: var(--space-xs-s) var(--space-m);
+    border-radius: 30px;
+}
+
+.cta_buttons .clr-rd:hover {
+    background-color: var(--clr-txt);
+    color: var(--clr-cta-text);
+
+}
+
+/* main styling start */
+
+/* main top */
+.main_top {
+    overflow: hidden;
+    width: 100%;
+    padding: 10em 0 10em 2em;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.top-section-content h2 {
+    position: absolute;
+    top: 135px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--font-overpass);
+    font-size: 2rem;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.main_top_content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.main_top_content .content-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.main_top_content .content-left .content-top h3,
+.main_top_content .content-left .content-bottom h3{
+     font-family: var(--font-overpass);
+     font-size: 1.6rem;
+     font-weight: var(--fw-600);
+     color: var(--heading-clr);
+     line-height: 1.5;
+     margin-bottom: 0.5em;   
+}
+
+
+.main_top_content .content-left .content-top p,
+.main_top_content .content-left .content-bottom p   {
+    max-width: 31em;
+    font-family: var(--font-overpass);
+    color: var(--body-copy);
+    line-height: 1.7em;
+}
+.main_top_content .content-right {
+    width: 50%;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.main_top .content-right img {
+    width: 120%;
+    margin-left: 50px;
+}
+
+/* main middle styling */
+.main_middle {
+    position: relative;
+    background-color: var(--clr-gray-blue);
+    border-bottom-left-radius: 5em ;
+    border-top-right-radius: 5em ;
+}
+
+.middle-section-content {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.middle-section-content .middle-content-left img {
+    width: auto;
+    margin-top: 3em;
+    margin-left: -3em;
+}
+
+.middle-content-left {
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.middle-content-right {
+    width: 40%;
+}
+.middle-content-right h2 {
+    font-family: var(--font-overpass);
+    font-size: 2rem;
+    line-height: 1em;
+    color: var(--clr-txt);
+    margin-bottom: 1em;
+}
+
+.middle-content-right p {
+    font-family: var(--font-overpass);
+    color: var(--clr-txt);
+    line-height: 2em;
+    max-width: 500px;
+}
+
+/* main bottom styling start */
+
+
+.main_bottom{
+    overflow: hidden;
+    width: 100%;
+    padding: 10em 2em 10em 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-section-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+
+}
+
+.bottom-section-content .content-left {
+    width: 50%;
+}
+
+.bottom-section-content .content-left img {
+    width: 120%;
+    margin-left: -50px;
+}
+
+.bottom-section-content .content-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.bottom-section-content .content-right  .content-top h3,
+.bottom-section-content .content-right  .content-bottom h3{
+     font-family: var(--font-overpass);
+     font-size: 1.6rem;
+     font-weight: var(--fw-600);
+     color: var(--heading-clr);
+     line-height: 1.5;
+     margin-bottom: 0.5em;   
+}
+
+
+.bottom-section-content .content-right  .content-top p,
+.bottom-section-content .content-right  .content-bottom p   {
+    max-width: 31em;
+    font-family: var(--font-overpass);
+    color: var(--body-copy);
+    line-height: 1.7em;
+}
+
+/* footer styling start */
+
+.footer {
+    background-color: var(--footer-bg);
+    width: 100%;
+    border-top-right-radius: 5em ;
+    padding: 5em 2em;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 11em;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 13em;
+    width: 100%;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-menu-list {
+    font-family: var(--font-ubunto);
+    font-weight: var(--fw-4);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.footer-menu-list a {
+    color: var(--clr-txt);
+}
+
+.footer-sub-menu .footer-sub-menu-list {
+    display: block;
+    padding: 0.5em 0;
+}
+.footer-sub-menu-list a {
+    color: var(--clr-footer-txt);
+}
+.footer-sub-menu-list:hover {
+    text-decoration: underline;
+}
